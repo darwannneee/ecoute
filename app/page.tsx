@@ -3,6 +3,28 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import Navbar from "@/components/Navbar";
 import { OBJLoader } from 'three-stdlib';
+import { Lexend_Deca, Roboto, Cabin, Poppins } from 'next/font/google'
+
+
+// Import Image
+import BrandEdintityImage from "@/public/assets/img/brand_identity.jpg"
+import DigitalAgencyImage from "@/public/assets/img/digital_agency.jpg"
+import ModelAgency from "@/public/assets/img/modelAgency.jpg"
+
+const LexendDeca = Lexend_Deca ({
+  weight: '600',
+  subsets: ['latin']
+})
+
+const RobotoFont = Roboto ({
+  weight: '400',
+  subsets: ['latin']
+})
+
+const CabinFont = Cabin ({
+  weight: '400',
+  subsets: ['latin']
+})
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -115,7 +137,7 @@ export default function Home() {
           
          {/* Text Below Canvas */}
           <div className="absolute bottom-0 left-0 w-full flex justify-center mb-4 md:bottom-10 md:left-auto md:w-auto md:ml-14">
-            <p className="text-base text-[#9986BD] font-light text-center md:text-right">
+            <p className={`text-base text-[#9986BD] font-light text-center md:text-right ${CabinFont.className}`}>
               TRANSFORMING IDEAS <br />
               INTO IMPACTFUL <br />
               VISUAL
@@ -125,23 +147,70 @@ export default function Home() {
 
         {/* Text Content Section (Right) */}
         <div className="flex flex-col justify-center space-y-2 text-center md:text-right pt-10 md:mr-48 md:pt-40">
-          <h2 className="text-xl uppercase text-[#9986BD] font-bold">GET IN TOUCH</h2>
-          <h1 className="text-8xl font-bold leading-[80px] text-white">
+          <h2 className={`text-xl uppercase text-[#9986BD] ${RobotoFont.className} font-bold`}>GET IN TOUCH</h2>
+          <h1 className={`text-8xl font-bold leading-[80px] text-white ${LexendDeca.className} font-bold`}>
             Your Voice,<br />
             Our
             <br />
             <span className='text-8xl'>Priority</span>
           </h1>
-          <p className="text-lg pt-3 font-light text-[#9986BD]">
+          <p className={`text-lg pt-3 font-light text-[#9986BD] ${CabinFont.className}`}>
             Listen - Connect - Evolve
           </p>
         </div>
       </div>
 
       {/* Discover What We Do */}
-      <div className='grid md:grid-cols-2 md:mx-20 text-center pt-28'>
+      <div className='grid md:grid-cols-2 pt-28 md:mx-40 md:py-20'>
         <div>
-          <h1 className='text-[#9986BD] text-5xl'>Discover What <br /> We Do</h1>
+          <h1 className={`text-[#9986BD] text-5xl ${LexendDeca.className} md:mr-44`}>Discover What <br /> We Do</h1>
+          <div className={`${CabinFont.className}`}>
+            <h1 className='mr-44 mt-8'> <span className='font-bold'>Brand Digital</span>  adalah divisi yang bertanggung jawab untuk mengelola dan memperkuat kehadiran merek di ruang digital, melalui strategi yang terukur, inovatif, dan berfokus pada kebutuhan konsumen. Divisi ini memastikan bahwa setiap aspek dari identitas merek tercermin dengan konsisten di berbagai platform digital, baik itu melalui media sosial, website, maupun kampanye digital lainnya.</h1>
+            <h1 className='mr-44 mt-8'> <span className='font-bold'>Brand Digital</span>  adalah divisi yang bertanggung jawab untuk mengelola dan memperkuat kehadiran merek di ruang digital, melalui strategi yang terukur, inovatif, dan berfokus pada kebutuhan konsumen. Divisi ini memastikan bahwa setiap aspek dari identitas merek tercermin dengan konsisten di berbagai platform digital, baik itu melalui media sosial, website, maupun kampanye digital lainnya.</h1>
+            <h1 className='mr-44 mt-8'> <span className='font-bold'>Brand Digital</span>  adalah divisi yang bertanggung jawab untuk mengelola dan memperkuat kehadiran merek di ruang digital, melalui strategi yang terukur, inovatif, dan berfokus pada kebutuhan konsumen. Divisi ini memastikan bahwa setiap aspek dari identitas merek tercermin dengan konsisten di berbagai platform digital, baik itu melalui media sosial, website, maupun kampanye digital lainnya.</h1>
+          </div>
+          
+        </div>
+
+        <div className={`${LexendDeca.className}`}>
+          <div className='relative w-[600px] h-60 mt-5'>
+            {/* Overlay yang lebih gelap untuk background image */}
+            <div
+              className='absolute inset-0 bg-black opacity-30 hover:opacity-80 rounded-lg transition-opacity duration-300'
+              style={{ backgroundImage: `url('${BrandEdintityImage.src}')`, backgroundPosition: 'center', backgroundSize: 'cover' }}
+            ></div>
+
+            {/* Teks yang diposisikan di tengah secara horizontal dan vertikal */}
+            <div className='absolute inset-0 flex items-center justify-center'>
+              <h1 className={`${LexendDeca.className} text-2xl text-white text-center`}>Brand Digital</h1>
+            </div>
+          </div>
+
+          <div className='relative w-[600px] h-60 mt-5'>
+            {/* Overlay yang lebih gelap untuk background image */}
+            <div
+              className='absolute inset-0 bg-black opacity-50 hover:opacity-80 rounded-lg transition-opacity duration-300'
+              style={{ backgroundImage: `url('${DigitalAgencyImage.src}')`, backgroundPosition: 'center', backgroundSize: 'cover' }}
+            ></div>
+
+            {/* Teks yang diposisikan di tengah secara horizontal dan vertikal */}
+            <div className='absolute inset-0 flex items-center justify-center'>
+              <h1 className={`${LexendDeca.className} text-2xl text-white text-center`}>Digital Agency</h1>
+            </div>
+          </div>
+
+          <div className='relative w-[600px] h-60 mt-5'>
+            {/* Overlay yang lebih gelap untuk background image */}
+            <div
+              className='absolute inset-0 bg-black opacity-50 hover:opacity-80 rounded-lg transition-opacity duration-300'
+              style={{ backgroundImage: `url('${ModelAgency.src}')`, backgroundPosition: 'center', backgroundSize: 'cover' }}
+            ></div>
+
+            {/* Teks yang diposisikan di tengah secara horizontal dan vertikal */}
+            <div className='absolute inset-0 flex items-center justify-center'>
+              <h1 className={`${LexendDeca.className} text-2xl text-white text-center`}>Model Agency</h1>
+            </div>
+          </div>
         </div>
       </div>
     </main>

@@ -2,6 +2,13 @@
 import { useState } from "react";
 import Logo from "@/public/assets/img/Logo.png";
 import Image from "next/image";
+import { Inria_Sans, Lexend_Deca } from 'next/font/google'
+
+const InriaSansFont = Inria_Sans({
+    weight: '400',
+    subsets: ['latin']
+})
+
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +25,8 @@ export default function Navbar() {
             </div>
 
             {/* Logo di Tengah */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 flex-1 space-x-12 hidden md:flex">
-                <a className="font-bold text-md">About Us</a>
+            <div className={`absolute left-1/2 transform -translate-x-1/2 flex-1 space-x-12 hidden md:flex ${InriaSansFont.className}`}>
+                <a className="font-bold text-md border-b-2 border-[#9986BD]">About Us</a>
                 <a className="font-bold text-md">What We Do</a>
                 <a className="font-bold text-md">Portfolio</a>
                 <a className="font-bold text-md">Contact</a>
