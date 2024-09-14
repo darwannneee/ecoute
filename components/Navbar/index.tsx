@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import Logo from "@/public/assets/img/Logo3d.png";
+import Logo from "@/public/assets/img/Logo.png";
 import Image from "next/image";
 
 export default function Navbar() {
