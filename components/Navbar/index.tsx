@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Logo from "@/public/assets/img/Logo.png";
 import Image from "next/image";
-import { Inria_Sans, Lexend_Deca } from 'next/font/google'
+import { Inria_Sans } from 'next/font/google'
 
 const InriaSansFont = Inria_Sans({
     weight: '400',

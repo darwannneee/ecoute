@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import Navbar from "@/components/Navbar";
 import { OBJLoader } from 'three-stdlib';
-import { Lexend_Deca, Roboto, Cabin, Poppins } from 'next/font/google'
+import { Lexend_Deca, Roboto, Cabin } from 'next/font/google'
 
 
 // Import Image
