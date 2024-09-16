@@ -4,10 +4,6 @@ import * as THREE from 'three';
 import { OBJLoader } from 'three-stdlib';
 import { Lexend_Deca } from 'next/font/google';
 
-// Import Image
-import BrandEdintityImage from "@/public/assets/img/brand_identity.jpg";
-import DigitalAgencyImage from "@/public/assets/img/digital_agency.jpg";
-import ModelAgency from "@/public/assets/img/modelAgency.jpg";
 import React from 'react';
 
 const LexendDeca = Lexend_Deca({
