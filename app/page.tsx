@@ -102,7 +102,7 @@ export default function Home() {
           <div className="absolute bottom-0 bg-[#9986BD] left-0 w-full flex justify-center items-center md:h-16 overflow-hidden">
             <div className="relative  w-full">
               <p className={`text-white text-2xl font-light px-4 ${LexendDeca.className}`} suppressHydrationWarning>
-                {React.createElement('marquee', { direction: 'left' }, 'WEBSITE IS UNDER MAINTENANCE')}
+                {React.createElement('marquee', { direction: 'left' }, 'WEBSITE ITS UNDER MAINTENANCE')}
               </p>
             </div>
           </div>
